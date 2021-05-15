@@ -2,6 +2,20 @@
 
 {% block content %}
 
-TODO LIST 
+<p>LISTA TASKÓW:</p>
+<table style="border: 1px solid black; border-collapse: collapse;">
+    <thead>
+        <td style="border: 1px solid black;"> User </td>
+        <td style="border: 1px solid black;"> Title </td>
+        <td style="border: 1px solid black;"> Deadline </td>
+    </thead>
+    <tbody> 
+    {% for i in object_list %}
+        <tr>
+            <td style="border: 1px solid black;"> {{ i.user }} </td> 
+            <td style="border: 1px solid black;"> {{ i.title }} </td>
+            <td style="border: 1px solid black;"> {{ i.deadline }} </td>
+        </tr>
+    {% endfor %}
 
 {% endblock content %}
