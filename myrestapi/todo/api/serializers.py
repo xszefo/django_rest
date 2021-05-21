@@ -3,8 +3,9 @@ from rest_framework import serializers
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
+        url = serializers.HyperlinkedIdentityField(view_name='api-todo:TaskDetailsAPI')
         model = todo.Task
-        fields = ['id', 'title']
+        fields = ['id', 'title', 'url']
 
 
 class TaskDetailSerializer(serializers.ModelSerializer):
