@@ -8,6 +8,7 @@
         <td style="border: 1px solid black;"> User </td>
         <td style="border: 1px solid black;"> Title </td>
         <td style="border: 1px solid black;"> Deadline </td>
+        <td style="border: 1px solid black;"> Number of comments </td>
     </thead>
     <tbody> 
     {% for i in object_list %}
@@ -15,6 +16,7 @@
             <td style="border: 1px solid black;"> {{ i.user }} </td> 
             <td style="border: 1px solid black;"> {{ i.title }} </td>
             <td style="border: 1px solid black;"> {{ i.deadline }} </td>
+            <td style="border: 1px solid black;"> {{ i.comment_set.count }} </td>
         </tr>
     {% endfor %}
 
