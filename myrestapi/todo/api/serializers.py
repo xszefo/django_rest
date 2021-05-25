@@ -17,4 +17,7 @@ class TaskDetailSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'username', 'deadline', 'created_at']
 
     def get_username(self, obj):
-        return obj.user.username
+        try:
+            return obj.user.username
+        except AttributeError:
+            return None
