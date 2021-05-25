@@ -21,4 +21,6 @@ urlpatterns = [
     path('', include('core.urls') ),
     path('todo/', include('todo.urls')),
     path('api/todo/', include('todo.api.urls', namespace='api-todo')),
+    path('api/comments/', include('comments.api.urls', namespace='comments-todo')),
+
 ]
